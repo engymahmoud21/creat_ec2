@@ -86,7 +86,7 @@ data "aws_ami" "ubuntu" {
 }
 terraform {
   backend "local" {
-    path = "path/to/your/Terraform.tfstate"
+    path = "/home/engy01/3_tier_project/terraform/Terraform.tfstate"
   }
 }
 
