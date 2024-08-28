@@ -84,11 +84,5 @@ data "aws_ami" "ubuntu" {
     values = ["ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"]
   }
 }
-terraform {
-  backend "local" {
-    path = "/home/engy01/creat_ec2/Terraform.tfstate"
-  }
-}
-
 
 
