@@ -22,7 +22,7 @@ pipeline {
         stage('Terraform init') {
             steps {
                 script {
-                    dir('creat_ec2') {
+                    dir('/home/engy01/creat_ec2') {
                         sh 'terraform init'
                     }
                 }
@@ -31,7 +31,7 @@ pipeline {
         stage('Plan') {
             steps {
                 script {
-                    dir('creat_ec2') {
+                    dir('/home/engy01/creat_ec2') {
                         sh 'terraform plan  -out=tfplan'
                         sh 'terraform show -no-color tfplan > tfplan.txt'
                     }
@@ -41,7 +41,7 @@ pipeline {
         stage('Apply / Destroy') {
             steps {
                 script {
-                    dir('creat_ec2') {
+                    dir('/home/engy01/creat_ec2') {
                         if (params.action == 'apply') {
                             if (!params.autoApprove) {
                                 def plan = readFile 'tfplan.txt'
