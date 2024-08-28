@@ -38,3 +38,8 @@ variable "aws_secret_key" {
   type        = string
   default     = ""
 }
+variable "git_hub_token" {
+  description = "github token"
+  type        = string
+  default     = ""
+}
