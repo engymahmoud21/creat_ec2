@@ -10,6 +10,7 @@ pipeline {
         AWS_ACCESS_KEY_ID     = credentials('aws-access-key-id')
         AWS_SECRET_ACCESS_KEY = credentials('aws-secret-access-key')
         AWS_DEFAULT_REGION    = 'us-weasr-2'
+        GITHUB_TOKEN          = credentials('github-token')
     }
 
     stages {
