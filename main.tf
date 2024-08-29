@@ -69,7 +69,7 @@ resource "aws_instance" "web" {
   instance_type = var.instance_type
   subnet_id     = aws_subnet.public.id
   security_groups = [aws_security_group.allow_ssh.name]
-  key_name      = var.key_name
+  #key_name      = var.key_name
   tags = {
     Name = "my-web-server"
   }
